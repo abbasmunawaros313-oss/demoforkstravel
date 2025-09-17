@@ -295,7 +295,7 @@ export default function AdminHome() {
               </div>
               <div>
                 <div className="text-xs uppercase opacity-80 text-center">Employees</div>
-                <div className="text-2xl font-bold">{totalEmployees + 3}</div>
+                <div className="text-2xl font-bold">{totalEmployees }</div>
                 <div className="text-sm opacity-80">Distinct handlers</div>
               </div>
             </div>
