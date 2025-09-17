@@ -66,53 +66,8 @@ export default function SendEmailPage() {
 
   // Send Emails via backend
   const handleSend = async () => {
-    if (!subject.trim() || !body.trim()) {
-      toast.error("Subject and body are required");
-      return;
-    }
-
-    if (!filteredRecipients.length) {
-      toast.error("No recipients selected");
-      return;
-    }
-
-    try {
-     const res = await fetch(
-  "https://email-backend-production-2e52.up.railway.app/send-email",
-  {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      subject,
-      body,
-      recipients: filteredRecipients,
-      file: fileData,
-    }),
-  }
-);
-
-
-
-      const data = await res.json();
-
-      if (data.success) {
-        toast.success(
-          `✅ Sent ${data.sent} emails successfully ${
-            sendAll
-              ? "(All)"
-              : `(from ${startIndex + 1} to ${Math.min(
-                  endIndex,
-                  recipients.length
-                )})`
-          }`
-        );
-      } else {
-        toast.error("❌ Failed to send emails");
-      }
-    } catch (err) {
-      console.error(err);
-      toast.error("⚠️ Error connecting to email server");
-    }
+     toast.loading("Sending emails...");
+     toast.success("Emails services are paid!");
   };
 
   const handleExportCSV = () => {
