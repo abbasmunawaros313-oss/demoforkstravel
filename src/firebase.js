@@ -1,22 +1,21 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
-import { getFirestore } from "firebase/firestore";
+import { getAnalytics } from "firebase/analytics";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyAMOTHc9U1whgepO8AAE0-xaK7xiNjqqVQ",
-  authDomain: "osportalmanagmnet.firebaseapp.com",
-  projectId: "osportalmanagmnet",
-  storageBucket: "osportalmanagmnet.firebasestorage.app",
-  messagingSenderId: "846394060555",
-  appId: "1:846394060555:web:a4c6d3b64af58cd77f3c0e"
+  apiKey: "AIzaSyDzojxzDVVblL_jV-yzPgc2q0RAb9U7A2g",
+  authDomain: "kstravelportal.firebaseapp.com",
+  projectId: "kstravelportal",
+  storageBucket: "kstravelportal.firebasestorage.app",
+  messagingSenderId: "1041901376235",
+  appId: "1:1041901376235:web:7f6f883d154e324f8a64ae",
+  measurementId: "G-HR7SYR9VG6"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-export const auth = getAuth(app);
-export const db = getFirestore(app);
-export default app;
+const analytics = getAnalytics(app);
