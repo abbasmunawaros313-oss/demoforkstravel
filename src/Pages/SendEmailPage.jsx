@@ -66,7 +66,7 @@ export default function SendEmailPage() {
 
   // Send Emails via backend
   const handleSend = async () => {
-     toast.loading("Sending emails...");
+     
      toast.success("Emails services are paid!");
   };
 
